@@ -1,38 +1,96 @@
-.App {
-  text-align: center;
+body {
+  margin: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html {
+  transition: background-color 1s;
+}
+#root {
+  width: 100%;
+  margin: 0 10%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.quotebox {
+  height: auto;
+  width: 100%;
+  border: 1px rgb(145, 126, 126) solid;
+  border-radius: 10px;
+  text-align: right;
+  max-width: 70rem;
+}
+
+#quote {
+  margin: 50px;
+  font-size: 50px;
+  text-align: left;
+}
+
+.fadeIn {
+  opacity: 0;
+  display: block;
+  animation: slidein 1s ease-out forwards;
+}
+
+@keyframes slidein {
+  0% {
+    opacity: 0;
+    transform: translateY(-25px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+#author {
+  margin: 20px;
+  font-size: 25px;
+  font-style: italic;
+}
+
+#guess-button {
+  border-radius: 15px;
+  border: 2px solid black;
+  padding: 20px;
+  width: 150px;
+  height: 75px;
+  margin: 30px;
+  /* height: 50px;
+  width: 100px; */
+  font-weight: 900;
+  font-size: 20px;
+  font-family: "Segoe UI", "Tahoma", "Geneva", "Verdana", sans-serif;
+}
+
+#newquote {
+  margin: 20px;
+  position: relative;
+  border-radius: 5px;
+  height: 70px;
+  width: 200px;
+  font-size: 25px;
+  font-weight: 900;
+  font-family: "Segoe UI", "Tahoma", "Geneva", "Verdana", sans-serif;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+#info_button {
+  border-radius: 25px;
+  border: none;
+  height: 50px;
+  width: 50px;
+  background-image: url("./question-mark.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 15px;
+  position: relative;
+  left: -90%;
+  top: 30px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.box {
+  border: 1px solid black;
+  padding: 10px;
+  background-color: white;
+  width: 30%;
 }
